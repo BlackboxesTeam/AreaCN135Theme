@@ -346,3 +346,16 @@ div.blockquote,
 .yui-navset-left .yui-content {
     border-left-color: #b7a9a9; /* different border color */
 }
+
+
+/* These two arguments are in a quirked-up CSS Module (rather than the main code block) so users can feed Wikidot variables into them. */
+ 
+#header h1 a::before {
+    content: "Area-CN-135";
+    color: black;
+}
+ 
+#header h2 span::before {
+    content: "记住，这里是中国";
+    color: black;
+}
