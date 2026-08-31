@@ -1,0 +1,228 @@
+@import url('https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css');
+@import url('https://cdn.jsdelivr.net/gh/BlackboxesTeam/AreaCN135Theme@main/minimal.css');
+@import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/BlackboxesTeam/AreaCN135Theme@main/fonts.css');
+
+/* -------------     BASIC     ------------- */
+a {
+    color: #00F;
+}
+
+a.newpage {
+     color: #026DCB;
+}
+
+/* ------------- PAGE WIDTH ------------- */
+#header, #top-bar {
+    max-width: 1284px;
+}
+
+#content-wrap {
+    max-width: 90%;
+}
+
+/* ------------- HEADER ------------- */
+#header {
+    background-image: url('https://scpsandboxcn.wikidot.com/local--files/collab:yale-max-rymingenu/areacn135logo_3.png');
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #header {
+     background-size: 5.25rem !important;
+    }
+}
+
+@media (min-width: 581px) and (max-width: 767px) {
+    #header {
+     background-position: 0 4.62em;
+     background-size: 4.75rem !important;
+    }
+}
+
+@media (max-width: 479px) {
+    #header {
+     background-size: 4.25em;
+    }
+}
+
+@media (max-width: 767px) {
+    #main-content {
+     max-width: 100%;
+     margin: 0;
+    }
+}
+
+#header h1 {
+    max-height: 92px;
+}
+
+#header h1 a {
+    visibility: hidden;
+}
+
+#header h1 a::before {
+    font-family: "HarmonyOS Sans SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: 85%;
+    font-weight: 700;
+    visibility: visible;
+}
+
+#header h2 span {
+    visibility: hidden;
+}
+
+#header h2 span::before {
+    font-family: "Liu Jian Mao Cao", cursive;
+    font-size: 1.25em;
+    visibility: visible;
+}
+
+
+/* ------------- SEARCH ------------- */
+#search-top-box form::after {
+    content: "";
+    position: absolute;
+    background-color: #4c4c4c;
+    mask-image: url("https://fastly.jsdelivr.net/gh/Crimone/crimson-anemone@main/files/search-top-box-mask.svg");
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: 1.2em;
+    pointer-events: none;
+    cursor: pointer;
+    width: 1.25em;
+    height: 100%;
+    top: 0;
+    right: 12px;
+}
+
+#search-top-box {
+    width: fit-content;
+    background: #f0f0f0;
+    padding: 0.45em;
+    border-radius: 20px;
+}
+
+#search-top-box input {
+    border: unset !important;
+    background: unset !important;
+    box-shadow: unset !important;
+    padding: 0 0.65em;
+}
+
+#search-top-box-form input[type="submit"] {
+    color: transparent !important;
+}
+
+#search-top-box-input:focus-visible {
+    outline: none;
+}
+
+/* ======= CONTENT ======== */
+/* ------------- RATEBOX ------------- */
+div.page-rate-widget-box,
+#page-content div.rate-box-with-credit-button {
+    box-shadow: unset !important;
+}
+
+div.page-rate-widget-box span.rate-points,
+div.page-rate-widget-box span.cancel,
+#page-content div.rate-box-with-credit-button {
+    border-radius: 0 !important;
+}
+
+/* ------------- TABVIEW ------------- */
+
+
+/* ------------- MOBILE ------------- */
+@media only screen and (max-width: 540px) {
+    .scp-image-block:is(.block-right, .block-left) {
+     float: none;
+     margin: 0.1rem auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #main-content {
+     margin: 0 0 0 20em;
+    }
+}
+
+@media (max-width: 789px) {
+    #header {
+     position: relative;
+    }
+    
+    #login-status::before {
+     content: "";
+     z-index: 2;
+     position: absolute;
+     top: 4px;
+     left: -22px;
+     width: 100%;
+     height: 100%;
+     background-color: #4c4c4c;
+     cursor: pointer;
+     mask-image: url("https://fastly.jsdelivr.net/gh/Crimone/crimson-anemone@main/files/user-circle.svg");
+     mask-position: center right;
+     mask-repeat: no-repeat;
+     mask-size: 1rem;
+     pointer-events: all;
+     transition: background-color .15s cubic-bezier(.4, 0, .2, 1);
+     visibility: visible;
+    }
+
+    #login-status:hover::before {
+     visibility: hidden;
+    }
+
+    #login-status:hover {
+     visibility: visible;
+    }
+
+    #login-status {
+     visibility: hidden;
+     padding-right: 2em;
+    }
+
+    #search-top-box {
+     background: unset;
+     position: absolute;
+     top: 7.5px;
+     right: -5px;
+    }
+
+    #search-top-box-input {
+     display: none;
+    }
+
+    #search-top-box-form input[type="submit"] {
+     width: 25px;
+    }
+}
+
+/* 我也有一道自制的排版 */
+.doc-content{
+    font-family: 'PT Serif', 'Noto Serif SC', serif;
+    font-size: 12pt;
+    line-height: 1.6;
+}
+
+.doc-content :is(h1, h2, h3, h4, h5, h6) {
+    text-align: center;
+}
+
+.doc-content > :is(h1, h2, h3, h4, h5, h6):first-child {
+    font-family: "HarmonyOS Sans SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-weight: 700;
+}
+
+.doc-content > :is(h1, h2, h3, h4, h5, h6):not(:first-child) {
+    font-family: 'PT Serif', 'Noto Serif SC', serif;
+    font-weight: 600;
+}
+
+/* 隐藏页面自己的标题 */
+#content-wrap #page-title {
+  display:none!important;
+}
